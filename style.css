@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image:url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+}
+
+.div-center-after-column {
+    display: flex;
+    align-items: center;
+}
+
+.div-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-padding {
+    padding: 50px;
+}
+
+.btn {
+    cursor: pointer;
+}
