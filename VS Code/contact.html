@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+    <title>BTC Chart App</title>
+</head>
+
+<body>
+    <div class="div-column div-center-after-column">
+        <h1>Contact form</h1>
+        <form onsubmit="sendMail(event)">
+            <div class="div-column">
+                <label>
+                    <h3>Your email:</h3>
+                    <input type="email" name="Email Address:">
+                </label>
+                <label>
+                    <h3>Your message:</h3>
+                    <textarea name="Message:"></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <a href="illustration.html"><img src="back.png" alt="Icon: Go-Back" class="img-back"></a>
+    </div>
+
+    <!-- 
+    <div class="div-column div-center-after-column">
+        <h1>Contact form</h1>
+        <form class="div-form" action="email.php" method="post">
+            <div class="div-column">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <br>
+                <label for="email">Email address:</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="nachricht">Message:</label>
+                <textarea class="textarea-message" name="nachricht" id="nachricht"></textarea>
+                <br>
+                <div class="div-center">
+                    <input class="btn-contact" type="submit" value="Send">
+                </div>
+            </div>
+        </form>
+    </div> -->
+</body>
+
+</html>

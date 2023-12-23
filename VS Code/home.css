@@ -1,0 +1,13 @@
+.btn-home {
+    width: 15rem;
+    height: 3em;
+    margin: 1.5rem;
+}
+
+/*width: 280px galaxy fold, height: 600px nest hub*/
+
+@media only screen and (max-device-width: 20em) {
+    .btn-home {
+        margin: 1.2rem;
+    }
+}
