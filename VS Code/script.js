@@ -3,9 +3,14 @@ let users = [
 ];
 
 function addUser() {
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    users.push({ email: email, password: password });
-    // Weiterleitung zur Login-Seite + Nachricht anzeigen: "Erfolgreiche Registrierung"
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
+
+    // asynchrone Ausführung der Funktion
+    setTimeout(() => {
+        users.push({ email: email.value, password: password.value });
+    }, 0);
+
+    // Weiterleitung zu Login-Seite + Nachricht anzeigen: "erfolgreiche Registrierung"
     window.location.href = 'login.html?msg=You have registered successfully';
 }
