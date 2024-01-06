@@ -1,4 +1,4 @@
-let users = [
+/* let users = [
     { 'email': 'marioneubacher@protonmail.com', 'password': 'test123' }
 ];
 
@@ -14,3 +14,4 @@ function addUser() {
     // Weiterleitung zu Login-Seite + Nachricht anzeigen: "erfolgreiche Registrierung"
     window.location.href = 'login.html?msg=You have registered successfully';
 }
+ */
