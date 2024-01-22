@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="comparison.css"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparison.css">
     <title>BTC Chart App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cryptocompare/3.0.0/cryptocompare.min.js"></script>
 </head>
+
+<!-- a3c64b13d9477850cfb791302913cd2d77977dc0915fb8b5df7f43640a66cd2c -->
+
 <body>
-    <div class="div-column div-center-after-column">
-        <h1 style="color: white">Bitcoin & Traditional Assets ROI</h1>
-        <img class="img-comparison" src="comparison.jpg" alt="">
-        <a href="illustration.html"><img src="back.png" alt="Icon: Go-Back" class="img-back"></a>
+    <script src="navbar.js"></script>
+
+    <div class="div-column">
+        <h1>Bitcoin-Preis: <span id="bitcoinPreisUSD"></span> USD</h1><br>
+        <h1>Bitcoin-Preis: <span id="bitcoinPreisEUR"></span> EUR</h1>
     </div>
+
+    <script>
+        var apiSchluessel = 'a3c64b13d9477850cfb791302913cd2d77977dc0915fb8b5df7f43640a66cd2c';
+        var bitcoinSymbol = 'BTC';
+        var vergleichsWährungen = ['USD', 'EUR'];
+
+        // Eine GET-Anfrage an die CryptoCompare-API senden
+        fetch('https://min-api.cryptocompare.com/data/pricemulti?fsyms=' + bitcoinSymbol + '&tsyms=' + vergleichsWährungen.join() + '&api_key=' + apiSchluessel)
+            .then(response => response.json())
+            .then(data => {
+                // Daten in deine HTML-Seite integrieren
+                document.getElementById('bitcoinPreisUSD').innerText = data[bitcoinSymbol]['USD'];
+                document.getElementById('bitcoinPreisEUR').innerText = data[bitcoinSymbol]['EUR'];
+            })
+            .catch(error => {
+                console.error('Fehler beim Abrufen der Daten: ', error);
+            });
+    </script>
+
 </body>
+
 </html>

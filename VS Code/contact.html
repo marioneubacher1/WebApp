@@ -12,9 +12,20 @@
 
 <body>
     <div class="div-column div-center-after-column">
-        <h1>Contact form</h1>
-        <form onsubmit="sendMail(event)">
-            <div class="div-column">
+        <h1>Mail versenden</h1>
+
+        <form action="send.php" method="post">
+            <label for="absender">Absender:</label>
+            <input type="email" name="absender" id="absender" required>
+            <label for="betreff">Betreff:</label>
+            <input type="text" name="betreff" id="betreff" required>
+            <label for="nachricht">Nachricht:</label>
+            <textarea name="nachricht" id="nachricht" required></textarea>
+            <input type="submit" value="Absenden">
+        </form>
+
+        <!-- <form onsubmit="sendMail(event)">
+            <div class="div-column div-width">
                 <label>
                     <h3>Your email:</h3>
                     <input type="email" name="Email Address:">
@@ -25,9 +36,10 @@
                 </label>
                 <button type="submit">Send</button>
             </div>
-        </form>
-        <a href="illustration.html"><img src="back.png" alt="Icon: Go-Back" class="img-back"></a>
+        </form> -->
     </div>
+
+    <script src="navbar.js"></script>
 
     <!-- 
     <div class="div-column div-center-after-column">

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="illustration.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="illustration.css">
     <title>BTC Chart App</title>
     <script src="illustration.js"></script>
     <script src="chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body onload="init()">
-    <div class="div-column">
-        <div class="div-center div-navbar">
-            <a href="comparison.html"><button class="btn btn-illustration">Comparison to other assets</button></a>
-            <a href="contact.html"><button class="btn btn-illustration">Contact</button></a>
-            <a href="imprint.html"><button class="btn btn-illustration">Imprint</button></a>
-            <a href="home.html"><button class="btn btn-illustration">Logout</button></a>
-        </div>
+    <div style="display: flex">
+        <script src="navbar.js"></script>
+
         <div class="div-column div-center-after-column">
             <h1>The current price of Bitcoin in USD:</h1>
             <p style="color: white" id="course"></p>
-    
+
             <div class="illustration-chart">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
     </div>
 </body>
+
 </html>

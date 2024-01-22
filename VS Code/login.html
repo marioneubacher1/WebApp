@@ -7,41 +7,27 @@
     <title>BTC Chart App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sign-in.css">
+    <script src="login.js"></script>
 </head>
 
 <body>
-    <a href="illustration.html"><button>Login</button></a>
-
-    <!-- Intention war eine Loginseite, welche die Username und Password checkt und zur Illustration.html weiterleitet. Bin bei der codeseitigen Umsetzung angestanden. 
-        
-    <form onsubmit="login(); return false;">
-        <input type="email" required id="email">
-        <input type="password" required id="password">
-        <button>Login</button>
-    </form>
-
-    <div id="msgBox"></div>
-
-    <script>
-        function login() {
-            let email = document.getElementById('email');
-            let password = document.getElementById('password');
-            let user = users.find(u => u.email == email.value && u.password == password.value);
-            console.log(user);
-            if (user) {
-                window.location.href = 'illustration.html';
-            } 
-        }
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const msg = urlParams.get('msg');
-
-        if (msg) {
-            msgBox.innerHTML = msg;
-        } 
-    </script>
-
-    <script src="script.js"></script> -->
+    <div class="div-column div-center-after-column">
+        <h1>This application provides the latest BTC chart</h1>
+        <form action="" method="POST" onsubmit="submitForm(); return false;">
+            <div class="input-field-container div-column">
+                <input type="username" name="username" id="username" class="input-field" placeholder="Username">
+                <input type="password" name="password" id="password" class="input-field" placeholder="Password">
+            </div>
+            <input type="submit" value="Sign In" class="button">
+        </form>
+        <div class="button-container">
+            <a href="register.html">
+                <button class="button">Sign Up</button>
+            </a>
+        </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>

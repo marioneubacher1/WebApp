@@ -1,49 +1,14 @@
 a {
-padding: 1rem;
+padding: 1em;
 }
 
 .div-navbar {
-    margin-top: -5rem;
+    margin-top: -5em;
 }
 
 .illustration-chart{
-    width: 50rem; 
+    width: 90%;
     background-color: white;
-}
-
-/*width: 280px galaxy fold, height: 600px nest hub*/
-@media only screen and (max-device-width: 50em) {
-    .illustration-chart{
-        width: 40rem;
-    }
-}
-
-@media only screen and (max-device-width: 40em) {
-    .illustration-chart{
-        width: 30rem;
-    }
-}
-
-@media only screen and (max-device-width: 30em) {
-    .illustration-chart{
-        width: 20rem;
-    }
-}
-
-@media only screen and (max-device-width: 20em) {
-    .illustration-chart{
-        width: 17.5rem;
-    }
-}
-
-@media only screen and (max-device-width: 40em) {
-    .div-navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    a {
-        padding: 0rem;
-    }
+    max-width: 50em; /* Beispiel: maximale Breite für die Illustration festlegen */
+    margin: 0 auto; /* Zentriere das Element horizontal */
 }

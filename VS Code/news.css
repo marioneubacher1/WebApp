@@ -1,0 +1,9 @@
+body {
+    color: white;
+}
+
+.div-rss-feed {
+    height: 40vh;
+    width: 80%;
+    margin-bottom: 5em;
+}

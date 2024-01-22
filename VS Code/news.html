@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto news</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="news.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.get('https://coinjournal.net/de/news/feed/', function (data) {
+                $(data).find('item').each(function () {
+                    var title = $(this).find('title').text();
+                    var description = $(this).find('description').text();
+                    $('#rss-feeds').append('<h2>' + title + '</h2><p>' + description + '</p>');
+                });
+            }).fail(function () {
+                $('#rss-feeds').text('Failed to retrieve the RSS feed');
+            });
+        });
+    </script>
+</head>
+
+<body onload="loadNews()">
+    <script src="navbar.js"></script>
+
+    <div class="div-column div-center-after-column">
+        <h1>Crypto news</h1>
+        <div>
+            <h2>Market Cap today:</h2>
+            <p id="market-cap"></p>
+        </div>
+        <div>
+            <h2>Volume today:</h2>
+            <p id="volume"></p>
+        </div>
+        <div id="rss-feeds" class="div-rss-feed"></div>
+    </div>
+</body>
+
+</html>
